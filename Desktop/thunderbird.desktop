@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/usr/bin/thunderbird
+Name=Thunderbird
+Comment=Email Client
+Icon=/usr/share/icons/hicolor/48x48/apps/thunderbird.png

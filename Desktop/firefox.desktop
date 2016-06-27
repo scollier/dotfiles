@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Terminal=false
+Exec=/usr/bin/firefox
+Name=Firefox
+Comment=Web Browser
+Icon=/usr/share/icons/hicolor/48x48/apps/firefox.png
+Comment[en_US.UTF-8]=Web Browser
