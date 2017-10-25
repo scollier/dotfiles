@@ -20,11 +20,6 @@ export HISTFILESIZE=15000
 export PS1='[\u@\h \W$(declare -F __git_ps1 &>/dev/null && __git_ps1 " (%s)")]\$ '
 source /usr/share/git-core/contrib/completion/git-prompt.sh
 
-rvm use system &> /dev/null
-
-# The next line updates PATH for the Google Cloud SDK.
-# source '/home/scollier/y/google-cloud-sdk/path.bash.inc'
-
 # The next line enables bash completion for gcloud.
 # source '/home/scollier/y/google-cloud-sdk/completion.bash.inc'
 if [ -f ~/.bashrc.vagrant ]; then
@@ -32,3 +27,20 @@ if [ -f ~/.bashrc.vagrant ]; then
 fi
 
 # Enable AWS auto-completion; scollier 5/10/2016
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/scollier/google-cloud-sdk/path.bash.inc' ]; then source '/home/scollier/google-cloud-sdk/path.bash.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/scollier/google-cloud-sdk/completion.bash.inc' ]; then source '/home/scollier/google-cloud-sdk/completion.bash.inc'; fi
+
+# Add kubectl auto-completion
+source <(kubectl completion bash)
+
+# add OpenShift project prompt
+# export PS1="[\u@\h \W ($(oc project -q))]\$ "
+export GOPATH=$HOME/go
+
+# Set up bc
+export BC_ENV_ARGS=$HOME/.bcrc
